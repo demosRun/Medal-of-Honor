@@ -1,0 +1,18 @@
+<template>
+  <div class="home">
+    内容
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+
+</style>
