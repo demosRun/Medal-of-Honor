@@ -78,6 +78,24 @@ li {
   transform: scale(1.1);
 }
 
+.footer[template="copyright"] {
+  color: white;
+  font-size: 16px;
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  bottom: 6%;
+  margin: auto;
+}
+
+[template="copyright"] p {
+  margin: 12px 0;
+  width: 100%;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
 [template="home"] .so-1 {
   position: absolute;
   left: 568px;
@@ -185,7 +203,7 @@ li {
 
 [template="home"] .so-19 {
   position: absolute;
-  left: 147px;
+  left: 110px;
   top: 33px;
   z-index: 2;
 }
@@ -239,6 +257,56 @@ li {
 [template="home"] .next {
   left: 102% !important;
 }
+
+[template="home"] .logo {
+  position: absolute;
+  left: 110px;
+  top: 90px;
+}
+
+[template="home"] .light-1 {
+  position: absolute;
+  left: 363px;
+  top: 102px;
+  -webkit-animation: fade 2s infinite;
+          animation: fade 2s infinite;
+}
+
+[template="home"] .light-2 {
+  position: absolute;
+  left: 957px;
+  top: 105px;
+  -webkit-animation: fade 2s infinite;
+          animation: fade 2s infinite;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 </style>
     <!-- 附属css文件 -->
     <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
@@ -247,7 +315,9 @@ li {
   </head>
   <body>
     <!-- 页面区域 -->
-    <div class="one ox" template="home"><img class="soulless so-18 item-18" width="241" height="60" src="./static/resource/one-18.png"><img class="soulless so-6 item-6 owo-hover-grow" width="141" height="35" src="./static/resource/one-6.png" :tap="changeItem('ghgxz')"><img class="soulless so-16 item-16 owo-hover-grow" width="115" height="35" src="./static/resource/one-16.png" :tap="changeItem('yyxz')"><img class="soulless so-17 item-17" width="298" height="60" src="./static/resource/one-17.png"><img class="soulless so-15 item-15 owo-hover-grow" width="141" height="35" src="./static/resource/one-15.png" :tap="changeItem('rmjyj')"><img class="soulless so-14 item-14 owo-hover-grow" width="141" height="35" src="./static/resource/one-14.png" :tap="changeItem('rmysj')"><img class="soulless so-13 item-13 owo-hover-grow" width="115" height="35" src="./static/resource/one-13.png" :tap="changeItem('rmkm')"><img class="soulless so-12 item-12 owo-hover-grow" width="114" height="35" src="./static/resource/one-12.png" :tap="changeItem('rmkm')"><img class="soulless so-11 item-11 owo-hover-grow" width="141" height="35" src="./static/resource/one-11.png" :tap="changeItem('rmkxj')"><img class="soulless so-10 item-10 owo-hover-grow" width="247" height="35" src="./static/resource/one-10.png" :tap="changeItem('wjgzjcgxz')"><img class="soulless so-9 item-9 owo-hover-grow" width="246" height="35" src="./static/resource/one-9.png" :tap="changeItem('mztjjcgxz')"><img class="soulless so-8 item-8 owo-hover-grow" width="287" height="36" src="./static/resource/one-8.png" :tap="changeItem('yglzjcgxz')"><img class="soulless so-7 item-7 owo-hover-grow" width="247" height="35" src="./static/resource/one-7.png" :tap="changeItem('wwbhjcgxz')"><img class="soulless so-19 item-19" width="1689" height="1163" src="./static/resource/one-19.png"><img class="soulless so-1 button item-1 owo-hover-grow" width="39" height="39" src="./static/resource/one-1.png" :tap="prev"><img class="soulless so-2 button item-2 owo-hover-grow" width="39" height="39" src="./static/resource/one-2.png" :tap="next"><ul class="content"><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li></ul><div class="edit"><div class="ghgxz"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="yyxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmjyj"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmysj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmkm"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmyx"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmkxj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="wjgzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="mztjjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="yglzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="wwbhjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div></div></div>
+    <div class="one ox" template="home"><img class="logo" src="./static/resource/logo.png"><img class="light-1" src="./static/resource/light.png"><img class="light-2" src="./static/resource/light.png"><img class="soulless so-18 item-18" width="241" height="60" src="./static/resource/one-18.png"><img class="soulless so-6 item-6 owo-hover-grow" width="141" height="35" src="./static/resource/one-6.png" :tap="changeItem('ghgxz')"><img class="soulless so-16 item-16 owo-hover-grow" width="115" height="35" src="./static/resource/one-16.png" :tap="changeItem('yyxz')"><img class="soulless so-17 item-17" width="298" height="60" src="./static/resource/one-17.png"><img class="soulless so-15 item-15 owo-hover-grow" width="141" height="35" src="./static/resource/one-15.png" :tap="changeItem('rmjyj')"><img class="soulless so-14 item-14 owo-hover-grow" width="141" height="35" src="./static/resource/one-14.png" :tap="changeItem('rmysj')"><img class="soulless so-13 item-13 owo-hover-grow" width="115" height="35" src="./static/resource/one-13.png" :tap="changeItem('rmkm')"><img class="soulless so-12 item-12 owo-hover-grow" width="114" height="35" src="./static/resource/one-12.png" :tap="changeItem('rmkm')"><img class="soulless so-11 item-11 owo-hover-grow" width="141" height="35" src="./static/resource/one-11.png" :tap="changeItem('rmkxj')"><img class="soulless so-10 item-10 owo-hover-grow" width="247" height="35" src="./static/resource/one-10.png" :tap="changeItem('wjgzjcgxz')"><img class="soulless so-9 item-9 owo-hover-grow" width="246" height="35" src="./static/resource/one-9.png" :tap="changeItem('mztjjcgxz')"><img class="soulless so-8 item-8 owo-hover-grow" width="287" height="36" src="./static/resource/one-8.png" :tap="changeItem('yglzjcgxz')"><img class="soulless so-7 item-7 owo-hover-grow" width="247" height="35" src="./static/resource/one-7.png" :tap="changeItem('wwbhjcgxz')"><img class="soulless so-19 item-19" width="1689" height="1163" src="./static/resource/one-19.png"><img class="soulless so-1 button item-1 owo-hover-grow" width="39" height="39" src="./static/resource/one-1.png" :tap="prev"><img class="soulless so-2 button item-2 owo-hover-grow" width="39" height="39" src="./static/resource/one-2.png" :tap="next"><ul class="content"><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li></ul><div class="edit"><div class="ghgxz"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="yyxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmjyj"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmysj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmkm"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmyx"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmkxj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="wjgzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="mztjjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="yglzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="wwbhjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div></div><div class="footer" template="copyright">
+    <p>人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>Copyright © 1997-2019 by www.people.com.cn. all rights reserved</p>
+  </div></div>
     <!-- 框架script代码 --><script>"use strict";
 
 // 存储页面基本信息
@@ -328,6 +398,11 @@ owo.script = {
       setTimeout(function () {
         content.style.display = 'block';
       }, 500);
+    },
+    "template": {
+      "copyright": {
+        "prop": {}
+      }
     }
   }
 };</script>

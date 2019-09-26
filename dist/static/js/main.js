@@ -3,8 +3,8 @@
 var deviseW = 1920
 // 设计高度
 var deviseH = 1163
-var innerWidth = window.innerWidth || window.outerWidth
-var innerHeight = window.innerHeight || window.outerHeight
+var innerWidth = window.innerWidth || window.outerWidth || window.screen.availWidth
+var innerHeight = window.innerHeight || window.outerHeight || window.screen.availHeight
 function getScale () {
   console.log(innerWidth, innerHeight, deviseW, deviseH)
   // 如果比例大于1则进入电脑模式
@@ -58,6 +58,8 @@ window.onresize = function ()  {
 }
 
 // 阻止微信拖动
-document.body.addEventListener('touchmove', function (e) {
-  e.preventDefault()
-}, {passive: false})
+if (_owo.isMobi) {
+  document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault()
+  }, {passive: false})
+}

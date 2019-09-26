@@ -1,5 +1,10 @@
 <template lang="pug">
 .one
+  //- 左上角logo
+  img.logo(src="@|logo.png|")
+  //- 标题上的光
+  img.light-1(src="@|light.png|")
+  img.light-2(src="@|light.png|")
   img.soulless.so-18.item-18(width="241", height="60", src="@|one-18.png|")
   //- 勋章
   img.soulless.so-6.item-6(width="141", height="35", src="@|one-6.png|", o-hover="grow", :tap="changeItem('ghgxz')")
@@ -88,6 +93,7 @@
       img(src="@|people-2.png|", width="340", height="610")
       img(src="@|people-1.png|", width="340", height="610")
       img(src="@|people-3.png|", width="340", height="610")
+  temple(name="copyright", src="https://owo.ink/public/080195cd2dcfc878e55f9b7f9fa1c9b7.page")
 </template>
 
 <script>
@@ -247,7 +253,7 @@
 }
 .so-19 {
   position: absolute;
-  left: 147px;
+  left: 110px;
   top: 33px;
   z-index: 2;
 }
@@ -292,5 +298,33 @@
 }
 .next {
   left: 102% !important;
+}
+.logo {
+  position: absolute;
+  left: 110px;
+  top: 90px;
+}
+.light-1 {
+  position: absolute;
+  left: 363px;
+  top: 102px;
+  animation: fade 2s infinite;
+}
+.light-2 {
+  position: absolute;
+  left: 957px;
+  top: 105px;
+  animation: fade 2s infinite;
+}
+@keyframes fade {
+  from {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1.0;
+  }
 }
 </style>

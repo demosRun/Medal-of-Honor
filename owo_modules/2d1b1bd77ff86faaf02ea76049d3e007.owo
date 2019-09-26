@@ -1,0 +1,25 @@
+<template>
+  <div class="footer">
+    <p>人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>Copyright &copy; 1997-2019 by www.people.com.cn. all rights reserved</p>
+  </div>
+</template>
+
+<style lang="less">
+  .footer {
+    color: white;
+    font-size: 16px;
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: 6%;
+    margin: auto;
+  }
+  p {
+    margin: 12px 0;
+    width: 100%;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+  }
+</style>
