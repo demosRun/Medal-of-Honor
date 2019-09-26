@@ -1,0 +1,103 @@
+17:29:21.768 INFO  --------------------------- 开始编译 --------------------------- 
+17:29:21.768 INFO  程序运行目录: D:\work\Medal of Honor 
+17:29:21.768 INFO  首次启动! 
+17:29:21.768 INFO  生成版本号: u8y2xa4xzys 
+17:29:21.780 INFO  清理资源文件夹: D:\work\Medal of Honor\dist\static 
+17:29:21.780 INFO  文件夹不存在: D:\work\Medal of Honor\dist\static 
+17:29:21.780 INFO  创建文件夹: D:\work\Medal of Honor\dist\static 
+17:29:21.780 INFO  读取模板文件: C:\Users\PG\Documents\GitHub\PG\lib\index.html 
+17:29:21.781 DEBUG 读取网页标题: {TAG_14226_TAG} 
+17:29:21.781 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"},{"name":"format-detection","content":"telephone=no, email=no"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-status-bar-style","content":"white"},{"name":"renderer","content":"webkit"},{"http-equiv":"X-UA-Compatible","content":"IE=edge,chrome=1"},{"name":"filetype","content":"1"},{"name":"publishedtype","content":"1"},{"name":"pagetype","content":"2"},{"name":"screen-orientation","content":"landscape"},{"name":"x5-orientation","content":"landscape"},{"name":"full-screen","content":"yes"},{"name":"x5-fullscreen","content":"true"},{"name":"browsermode","content":"application"},{"name":"x5-page-mode","content":"app"}] 
+17:29:21.782 DEBUG 模块 home 因名称重复被重命名为 home0 
+17:29:21.782 INFO  开始处理模块: home 
+17:29:22.304 DEBUG 缓存模板: home./src/page/home.page 
+17:29:22.304 DEBUG 模板home处理用时: 523 毫秒! 
+17:29:22.305 INFO  文件夹不存在: D:/work/Medal of Honor/dist/static/resource 
+17:29:22.306 INFO  创建文件夹: D:/work/Medal of Honor/dist/static/resource 
+17:29:22.306 DEBUG css中的资源处理完毕! 
+17:29:22.306 DEBUG 使用postcss处理样式，使用了1个插件! 
+17:29:22.348 INFO  文件夹不存在: D:\work\Medal of Honor\dist\static\css 
+17:29:22.349 INFO  创建文件夹: D:\work\Medal of Honor\dist\static\css 
+17:29:22.349 INFO  开始处理附属css中的资源 
+17:29:22.349 INFO  附属css中的资源处理完毕! 
+17:29:22.349 INFO  处理字体:{} 
+17:29:22.496 INFO  使用postcss处理完毕! 用时: 190 毫秒 
+17:29:22.496 DEBUG 需要经过特殊处理的css: [["[template=\"home\"] .one:",".one[template=\"home\"]:"],["[template=\"home\"] .one ",".one[template=\"home\"] "],["[template=\"home\"] .one{",".one[template=\"home\"]{"],["[template=\"home\"] div:","div[template=\"home\"]:"],["[template=\"home\"] div ","div[template=\"home\"] "],["[template=\"home\"] div{","div[template=\"home\"]{"]] 
+17:29:22.496 INFO  正在处理script! 
+17:29:22.497 DEBUG 处理资源: ["D:/work/Medal of Honor/src/resource/one-19-2.png","D:/work/Medal of Honor/src/resource/one-19.png"] 
+17:29:22.497 DEBUG 资源目录: D:/work/Medal of Honor/dist/static/resource 
+17:29:22.500 INFO  工程中只有一个页面! 
+17:29:22.500 INFO  文件夹不存在: D:\work\Medal of Honor\dist\static\js 
+17:29:22.501 INFO  创建文件夹: D:\work\Medal of Honor\dist\static\js 
+17:29:22.501 DEBUG 选择将js合并到html中! 
+17:29:23.411 INFO  js中的资源处理完毕! 
+17:29:23.411 INFO  读取文件: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js 
+17:29:23.411 DEBUG 处理引用脚本: [{"name":"jquery1.11.0","src":"http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js"},{"name":"swiper","src":"./src/resource/swiper.js"},{"name":"main","src":"./src/main.js","resource":true}] 
+17:29:23.412 DEBUG 外部脚本数量: 3 
+17:29:23.412 DEBUG 处理脚本: jquery1.11.0 
+17:29:23.412 DEBUG 网络脚本: jquery1.11.0 
+17:29:23.412 DEBUG 处理脚本: swiper 
+17:29:23.412 INFO  读取文件: D:\work\Medal of Honor\src\resource\swiper.js 
+17:29:23.412 DEBUG 处理脚本: main 
+17:29:23.412 INFO  读取文件: D:\work\Medal of Honor\src\main.js 
+17:29:23.412 DEBUG 输出scriptData 
+17:29:23.412 DEBUG 准备输出html! 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/one-19.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.414 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.415 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.416 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.416 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-2.png 
+17:29:23.416 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-1.png 
+17:29:23.416 DEBUG 忽略文件: D:/work/Medal of Honor/src/resource/people-3.png 
+17:29:23.416 DEBUG 处理资源: ["D:/work/Medal of Honor/src/resource/one-18.png","D:/work/Medal of Honor/src/resource/one-6.png","D:/work/Medal of Honor/src/resource/one-16.png","D:/work/Medal of Honor/src/resource/one-17.png","D:/work/Medal of Honor/src/resource/one-15.png","D:/work/Medal of Honor/src/resource/one-14.png","D:/work/Medal of Honor/src/resource/one-13.png","D:/work/Medal of Honor/src/resource/one-12.png","D:/work/Medal of Honor/src/resource/one-11.png","D:/work/Medal of Honor/src/resource/one-10.png","D:/work/Medal of Honor/src/resource/one-9.png","D:/work/Medal of Honor/src/resource/one-8.png","D:/work/Medal of Honor/src/resource/one-7.png","D:/work/Medal of Honor/src/resource/one-1.png","D:/work/Medal of Honor/src/resource/one-2.png","D:/work/Medal of Honor/src/resource/people-1.png","D:/work/Medal of Honor/src/resource/people-2.png","D:/work/Medal of Honor/src/resource/people-3.png"] 
+17:29:23.416 DEBUG 资源目录: D:/work/Medal of Honor/dist/static/resource 
+17:29:23.421 INFO  发送重新页面需要刷新命令! 
+17:29:23.495 INFO  主要逻辑文件写出成功! 
+17:29:23.500 INFO  读取成功: D:\work\Medal of Honor\src\main.css 
+17:29:23.501 DEBUG 处理资源: ["D:/work/Medal of Honor/src/resource/bg.jpg"] 
+17:29:23.501 DEBUG 资源目录: D:/work/Medal of Honor/dist/static/resource 
+17:29:23.501 INFO  读取成功: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js 
+17:29:23.501 INFO  读取成功: D:\work\Medal of Honor\src\resource\swiper.js 
+17:29:23.502 INFO  读取成功: D:\work\Medal of Honor\src\main.js 
+17:29:23.668 INFO  写入文件: D:\work\Medal of Honor\dist\static\css\main.css 
+17:29:23.668 INFO  写入文件: D:\work\Medal of Honor\dist\static\js\autoReload.js 
+17:29:23.694 INFO  写入文件: D:\work\Medal of Honor\dist\static\js\main.js 
+17:29:23.694 INFO  写入文件: D:\work\Medal of Honor\dist\static\js\swiper.js 

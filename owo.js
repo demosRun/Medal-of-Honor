@@ -82,6 +82,10 @@ module.exports = {
       name: "jquery1.11.0",
       src: "http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js"
     },
+    {
+      name: "swiper",
+      src: "./src/resource/swiper.js"
+    },
     // {
     //   name: "idangerous.swiper2.7.0.min",
     //   src: "./src/resource/idangerous.swiper2.7.0.min.js"

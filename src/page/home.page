@@ -1,18 +1,296 @@
-<template>
-  <div class="home">
-    内容
-  </div>
+<template lang="pug">
+.one
+  img.soulless.so-18.item-18(width="241", height="60", src="@|one-18.png|")
+  //- 勋章
+  img.soulless.so-6.item-6(width="141", height="35", src="@|one-6.png|", o-hover="grow", :tap="changeItem('ghgxz')")
+  img.soulless.so-16.item-16(width="115", height="35", src="@|one-16.png|", o-hover="grow", :tap="changeItem('yyxz')")
+  img.soulless.so-17.item-17(width="298", height="60", src="@|one-17.png|")
+  //- 荣誉
+  img.soulless.so-15.item-15(width="141", height="35", src="@|one-15.png|", o-hover="grow", :tap="changeItem('rmjyj')")
+  img.soulless.so-14.item-14(width="141", height="35", src="@|one-14.png|", o-hover="grow", :tap="changeItem('rmysj')")
+  img.soulless.so-13.item-13(width="115", height="35", src="@|one-13.png|", o-hover="grow", :tap="changeItem('rmkm')")
+  img.soulless.so-12.item-12(width="114", height="35", src="@|one-12.png|", o-hover="grow", :tap="changeItem('rmkm')")
+  img.soulless.so-11.item-11(width="141", height="35", src="@|one-11.png|", o-hover="grow", :tap="changeItem('rmkxj')")
+  img.soulless.so-10.item-10(width="247", height="35", src="@|one-10.png|", o-hover="grow", :tap="changeItem('wjgzjcgxz')")
+  img.soulless.so-9.item-9(width="246", height="35", src="@|one-9.png|", o-hover="grow", :tap="changeItem('mztjjcgxz')")
+  img.soulless.so-8.item-8(width="287", height="36", src="@|one-8.png|", o-hover="grow", :tap="changeItem('yglzjcgxz')")
+  img.soulless.so-7.item-7(width="247", height="35", src="@|one-7.png|", o-hover="grow", :tap="changeItem('wwbhjcgxz')")
+  //- 中间显示区域
+  img.soulless.so-19.item-19(width="1689", height="1163", src="@|one-19.png|")
+  //- 左右箭头
+  img.soulless.so-1.button.item-1(width="39", height="39", src="@|one-1.png|", :tap="prev", o-hover="grow")
+  img.soulless.so-2.button.item-2(width="39", height="39", src="@|one-2.png|", :tap="next", o-hover="grow")
+  //- 轮播图
+  ul.content
+    li
+      img(src="@|people-1.png|")
+    li
+      img(src="@|people-2.png|")
+    li
+      img(src="@|people-3.png|")
+    li
+      img(src="@|people-1.png|")
+    li
+      img(src="@|people-2.png|")
+    li
+      img(src="@|people-3.png|")
+    li
+      img(src="@|people-1.png|")
+  .edit
+    .ghgxz
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+    .yyxz
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+    .rmjyj
+      img(src="@|people-1.png|", width="340", height="610")
+    .rmysj
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+    .rmkm
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+    .rmyx
+      img(src="@|people-1.png|", width="340", height="610")
+    .rmkxj
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+    .wjgzjcgxz
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+    .mztjjcgxz
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+    .yglzjcgxz
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+    .wwbhjcgxz
+      img(src="@|people-3.png|", width="340", height="610")
+      img(src="@|people-2.png|", width="340", height="610")
+      img(src="@|people-1.png|", width="340", height="610")
+      img(src="@|people-3.png|", width="340", height="610")
 </template>
 
 <script>
   module.exports = {
+    data: {
+      swiper: null
+    },
     created: function () {
-
+      this.initContent()
+    },
+    prev: function () {
+      this.data.swiper.prev()
+    },
+    next: function () {
+      this.data.swiper.clickNext()
+    },
+    initContent: function () {
+      this.data.swiper = swiperIt.init(owo.query('.content')[0], {
+        autoplay: 3000,
+        showSlider: 3,
+        width: 32,
+        step: 1,
+        slideChange: function (ind) {
+        },
+        start: function (ind) {
+        }
+      })
+    },
+    changeItem: function (value) {
+      const content = owo.query('.content')[0]
+      content.style.display = 'none'
+      this.data.swiper.destroy()
+      const imgList = owo.query('.' + value + ' img')
+      let newHtml = ''
+      // 判断卡片数量决定是否启用轮播
+      if (imgList.length <= 3) {
+        // 隐藏左右按钮
+        this.$el.classList.add('no-button')
+        owo.query('.so-19')[0].src = '@|one-19-2.png|'
+        if (imgList.length === 1) {
+          newHtml += `<li style="left: 0;right: 0;"><img src="${imgList[0].src}"></li>`
+        } else if (imgList.length === 2) {
+          newHtml += `<li style="left: 10%;"><img src="${imgList[0].src}"></li><li style="left: 60%;"><img src="${imgList[1].src}"></li>`
+        } else if (imgList.length === 3) {
+          newHtml += `<li style="left: 0%;"><img src="${imgList[0].src}"></li><li style="left: 34%;"><img src="${imgList[1].src}"></li><li style="left: 68%;"><img src="${imgList[1].src}"></li>`
+        }
+      } else {
+        owo.query('.so-19')[0].src = '@|one-19.png|'
+        this.$el.classList.remove('no-button')
+        for (let ind = 0; ind < imgList.length; ind++) {
+          const item = imgList[ind]
+          newHtml += `<li><img src="${item.src}"></li>`
+        }
+        setTimeout(() => {
+          this.initContent()
+        }, 100)
+      }
+      owo.query('.content')[0].innerHTML = newHtml
+      setTimeout(() => {
+        content.style.display = 'block'
+      }, 500);
     }
   }
 </script>
 
 
 <style lang="less">
-
+.so-1 {
+  position: absolute;
+  left: 568px;
+  top: 654px;
+  z-index: 20;
+}
+.so-2 {
+  position: absolute;
+  left: 1753px;
+  top: 653px;
+  z-index: 19;
+}
+.so-18 {
+  position: absolute;
+  left: 246px;
+  top: 376px;
+  z-index: 3;
+}
+.so-6 {
+  position: absolute;
+  left: 296px;
+  top: 441px;
+  z-index: 15;
+}
+.so-16 {
+  position: absolute;
+  left: 309px;
+  top: 483px;
+  z-index: 5;
+}
+.so-17 {
+  position: absolute;
+  left: 214px;
+  top: 527px;
+  z-index: 4;
+}
+.so-15 {
+  position: absolute;
+  left: 295px;
+  top: 599px;
+  z-index: 6;
+}
+.so-14 {
+  position: absolute;
+  left: 294px;
+  top: 641px;
+  z-index: 7;
+}
+.so-13 {
+  position: absolute;
+  left: 307px;
+  top: 684px;
+  z-index: 8;
+}
+.so-12 {
+  position: absolute;
+  left: 307px;
+  top: 728px;
+  z-index: 9;
+}
+.so-11 {
+  position: absolute;
+  left: 292px;
+  top: 772px;
+  z-index: 10;
+}
+.so-10 {
+  position: absolute;
+  left: 244px;
+  top: 817px;
+  z-index: 11;
+}
+.so-9 {
+  position: absolute;
+  left: 245px;
+  top: 861px;
+  z-index: 12;
+}
+.so-8 {
+  position: absolute;
+  left: 220px;
+  top: 906px;
+  z-index: 13;
+}
+.so-7 {
+  position: absolute;
+  left: 240px;
+  top: 950px;
+  z-index: 14;
+}
+.so-19 {
+  position: absolute;
+  left: 147px;
+  top: 33px;
+  z-index: 2;
+}
+.content {
+  position: absolute;
+  width: 1098px;
+  height: 630px;
+  z-index: 23;
+  left: 633px;
+  top: 356px;
+  overflow: hidden;
+  li {
+    width: 340px;
+    height: 610px;
+    position: absolute;
+    background-size: 100% 100%;
+    cursor: pointer;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    transition: all 0.4s linear;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .show {
+    opacity: 1;
+  }
+  .hide {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.owo-hover-grow {
+  cursor: pointer;
+}
+.edit {
+  display: none;
+}
+.next {
+  left: 102% !important;
+}
 </style>

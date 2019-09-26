@@ -1,0 +1,218 @@
+body, html, .ox {
+  padding: 0;
+  margin: 0;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+}
+.owo-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owo-animation-forward {
+  z-index: 99;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+.owo-hover-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.owo-hover-grow:hover, .owo-hover-grow:focus, .owo-hover-grow:active {
+  transform: scale(1.1);
+}
+
+[template="home"] .so-1 {
+  position: absolute;
+  left: 568px;
+  top: 654px;
+  z-index: 20;
+}
+
+[template="home"] .so-2 {
+  position: absolute;
+  left: 1753px;
+  top: 653px;
+  z-index: 19;
+}
+
+[template="home"] .so-18 {
+  position: absolute;
+  left: 246px;
+  top: 376px;
+  z-index: 3;
+}
+
+[template="home"] .so-6 {
+  position: absolute;
+  left: 296px;
+  top: 441px;
+  z-index: 15;
+}
+
+[template="home"] .so-16 {
+  position: absolute;
+  left: 309px;
+  top: 483px;
+  z-index: 5;
+}
+
+[template="home"] .so-17 {
+  position: absolute;
+  left: 214px;
+  top: 527px;
+  z-index: 4;
+}
+
+[template="home"] .so-15 {
+  position: absolute;
+  left: 295px;
+  top: 599px;
+  z-index: 6;
+}
+
+[template="home"] .so-14 {
+  position: absolute;
+  left: 294px;
+  top: 641px;
+  z-index: 7;
+}
+
+[template="home"] .so-13 {
+  position: absolute;
+  left: 307px;
+  top: 684px;
+  z-index: 8;
+}
+
+[template="home"] .so-12 {
+  position: absolute;
+  left: 307px;
+  top: 728px;
+  z-index: 9;
+}
+
+[template="home"] .so-11 {
+  position: absolute;
+  left: 292px;
+  top: 772px;
+  z-index: 10;
+}
+
+[template="home"] .so-10 {
+  position: absolute;
+  left: 244px;
+  top: 817px;
+  z-index: 11;
+}
+
+[template="home"] .so-9 {
+  position: absolute;
+  left: 245px;
+  top: 861px;
+  z-index: 12;
+}
+
+[template="home"] .so-8 {
+  position: absolute;
+  left: 220px;
+  top: 906px;
+  z-index: 13;
+}
+
+[template="home"] .so-7 {
+  position: absolute;
+  left: 240px;
+  top: 950px;
+  z-index: 14;
+}
+
+[template="home"] .so-19 {
+  position: absolute;
+  left: 147px;
+  top: 33px;
+  z-index: 2;
+}
+
+[template="home"] .content {
+  position: absolute;
+  width: 1098px;
+  height: 630px;
+  z-index: 23;
+  left: 633px;
+  top: 356px;
+  overflow: hidden;
+}
+
+[template="home"] .content li {
+  width: 340px;
+  height: 610px;
+  position: absolute;
+  background-size: 100% 100%;
+  cursor: pointer;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+[template="home"] .content li img {
+  width: 100%;
+  height: 100%;
+}
+
+[template="home"] .content .show {
+  opacity: 1;
+}
+
+[template="home"] .content .hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+[template="home"] .owo-hover-grow {
+  cursor: pointer;
+}
+
+[template="home"] .edit {
+  display: none;
+}
+
+[template="home"] .next {
+  left: 102% !important;
+}
