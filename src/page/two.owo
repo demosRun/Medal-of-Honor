@@ -1,0 +1,247 @@
+<template lang="pug">
+.two
+  img.soulless.so-1.item-1(width="241", height="60", src="@|two-1.png|", :tap="changeItem('gjxz', 0)")
+  img.soulless.so-0.item-0(width="298", height="60", src="@|two-0.png|", :tap="changeItem('gjrych', 1)")
+  img.soulless.so-5.item-5(width="750", height="971", src="@|two-5.png|")
+  //- img.soulless.so-3.item-3(width="60", height="60", src="@|two-3.png|", :tap="prev")
+  //- img.soulless.so-2.item-2(width="60", height="60", src="@|two-2.png|", :tap="next")
+  //- img.qr(src="@|111.png|")
+  img.hand(src="@|hand.png|")
+  img.hide
+  ul.content-mini
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      activeIndex: 0,
+    },
+    created: function () {
+      this.changeItem('gjxz', 0)
+      owo.tool.touch({
+        el: this.$el,
+        end: (e) => {
+          // console.log(e.swipe)
+          if (e.swipe[0] < -50) {
+            if (this.data.swiper.isRun) {
+              this.next()
+            }
+          } else if (e.swipe[0] > 50) {
+            if (this.data.swiper.isRun) {
+              this.prev()
+            }
+          } else if (e.swipe[0] > 100) {
+            // const nextIndex = this.data.activeIndex + 1
+            // if (nextIndex >= owo.query('.edit div').length) {
+            //   owo.tool.toast('已经是最后一条了', 30)
+            // } else {
+            //   this.changeItem(owo.query('.edit div')[nextIndex].classList[0], nextIndex)
+            // }
+          } else if (e.swipe[0] < -100) {
+            // const nextIndex = this.data.activeIndex - 1
+            // if (nextIndex < 0) {
+            //   owo.tool.toast('已经是第一条了', 30)
+            // } else {
+            //   this.changeItem(owo.query('.edit div')[nextIndex].classList[0], nextIndex)
+            // }
+          }
+        }
+      })
+      setTimeout(() => {
+        owo.query('.hand')[0].style.display = 'none'
+      }, 6000)
+    },
+    initMiniContent: function () {
+      this.data.swiper = swiperIt.init(owo.query('.content-mini')[0], {
+        autoplay: 3000,
+        showSlider: 1,
+        width: 100,
+        step: 1,
+        slideChange: function (ind) {
+        },
+        start: function (ind) {
+        }
+      })
+    },
+    changeItem: function (value, ind) {
+      this.data.activeIndex = ind
+      const content = owo.query('.content-mini')[0]
+      content.style.display = 'none'
+      if (this.data.swiper) this.data.swiper.destroy()
+      let imgList = []
+      const temp = document.querySelectorAll('.ox[template="home"] .' + value + '')
+      temp.forEach(element => {
+        for (const key in element.children) {
+          if (element.children.hasOwnProperty(key)) {
+            const element2 = element.children[key];
+            imgList.push(element2)
+          }
+        }
+      })
+      // console.log(imgList)
+      let newHtml = ''
+      // 判断卡片数量决定是否启用轮播
+      if (imgList.length <= 3) {
+        // 隐藏左右按钮
+        this.$el.classList.add('no-button')
+        if (imgList.length === 1) {
+          newHtml += `<li style="left: 0;right: 0;">${imgList[0].outerHTML}</li>`
+        } else if (imgList.length === 2) {
+          newHtml += `<li style="left: 10%;">${imgList[0].outerHTML}</li><li style="left: 60%;">${imgList[1].outerHTML}</li>`
+        } else if (imgList.length === 3) {
+          newHtml += `<li style="left: 0%;">${imgList[0].outerHTML}</li><li style="left: 34%;">${imgList[1].outerHTML}</li><li style="left: 68%;">${imgList[2].outerHTML}</li>`
+        }
+      } else {
+        this.$el.classList.remove('no-button')
+        for (let ind = 0; ind < imgList.length; ind++) {
+          const item = imgList[ind]
+          // console.log(item)
+          newHtml += `<li>${item.outerHTML}</li>`
+        }
+        setTimeout(() => {
+          this.initMiniContent()
+        }, 100)
+      }
+      owo.query('.content-mini')[0].innerHTML = newHtml
+      setTimeout(() => {
+        content.style.display = 'block'
+      }, 0);
+    },
+    prev: function () {
+      this.data.swiper.clickPrev()
+    },
+    next: function () {
+      this.data.swiper.clickNext()
+    }
+  }
+</script>
+
+
+<style lang="less">
+.two {
+  width: 100%;
+  height: 100%;
+  background-image: url('@|two-6.png|');
+  background-size: 100% auto;
+  background-position-y: center;
+}
+.content-mini {
+  width: 38vh;
+  height: 68%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 14%;
+  z-index: 3;
+  overflow: hidden;
+}
+li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 100% 100%;
+  cursor: pointer;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: all 0.6s linear;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .show {
+    opacity: 1;
+    z-index: 2;
+    transform: translateZ(10px)
+  }
+  .hide {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.so-1 {
+  position: absolute;
+  height: 4.5%;
+  width: auto;
+  top: 6%;
+  left: 8%;
+  z-index: 10;
+}
+.so-0 {
+  position: absolute;
+  height: 4.6%;
+  width: auto;
+  top: 6%;
+  right: 7%;
+  left: auto;
+  z-index: 7;
+}
+.so-5 {
+  position: absolute;
+  height: 70%;
+  top: 13%;
+  width: auto;
+  z-index: 2;
+  left: -10%;
+  right: -10%;
+  margin: 0 auto;
+}
+.so-3 {
+  position: absolute;
+  left: 103px;
+  top: 735px;
+  z-index: 2;
+}
+.so-2 {
+  position: absolute;
+  left: 605px;
+  top: 736px;
+  z-index: 3;
+}
+.qr {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  z-index: 999;
+}
+.hand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10%;
+  opacity: 0.9;
+  z-index: 9;
+  animation: myfirst 2s infinite;
+  animation-timing-function: linear;
+  animation-direction:alternate;
+}
+@keyframes myfirst {
+  from {
+    left: 50%;
+    opacity: 0;
+  }
+  to {
+    left: 80%;
+    opacity: 1;
+  }
+}
+.hide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  opacity: 0;
+}
+</style>

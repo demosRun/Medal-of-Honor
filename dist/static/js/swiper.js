@@ -101,7 +101,7 @@ var swiperIt = {
       _this.timer = setInterval(function () {
         _this.next()
       }, _this.config.autoplay)
-      console.log('开启轮播!', _this.timer)
+      // console.log('开启轮播!', _this.timer)
       // 事件回调
       if (_this.config.start) {
         _this.config.start(_this.activeIndex)
@@ -111,7 +111,7 @@ var swiperIt = {
   },
   stopAutoPlay: function () {
     if (!this.isRun) return
-    console.log('停止轮播!', this.cont)
+    // console.log('停止轮播!', this.cont)
     clearInterval(this.timer)
     this.timer = null
     this.tempCheck = false
@@ -139,10 +139,11 @@ var swiperIt = {
     
   },
   clickNext: function () {
-    var _this = this
     this.stopAutoPlay()
     this.next()
-    this.startAutoPlay()
+    setTimeout(() => {
+      this.startAutoPlay()
+    }, 3000)
   },
   prev: function () {
     if (this.config.pagination) {
@@ -152,6 +153,13 @@ var swiperIt = {
     if (this.activeIndex < 0) this.activeIndex = this.contL.length - 1
     this.styleList.push(this.styleList.shift())
     this.move()
+  },
+  clickPrev: function () {
+    this.stopAutoPlay()
+    this.prev()
+    setTimeout(() => {
+      this.startAutoPlay()
+    }, 3000)
   },
   animate: function (obj, styleList, fn) {
     setTimeout(function () {

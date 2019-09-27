@@ -1,418 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <title>{TAG_14226_TAG}</title>
-    <!-- 页面的元信息 -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    <!-- 页面主样式文件 -->
-<style>
-body, html, .ox {
-  padding: 0;
-  margin: 0;
-}
 
-.owo-animation {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transform-style: preserve-3d;
-}
-.owo-animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.owo-animation-forward {
-  z-index: 99;
-}
+<head>
+  <title>{TAG_14226_TAG}</title>
+  <!-- 页面的元信息 -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.m5lo0b1cpla.css">
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+  <link rel="stylesheet" href="./static/css/owo.animation.m5lo0b1cpla.css">
+  <link rel="stylesheet" href="./static/css/owo.animate.m5lo0b1cpla.css">
+</head>
 
-a:link, a:visited {
-  text-decoration: none;
-}
+<body>
+  <!-- 页面区域 -->
+  <div class="one ox" template="home" style="display: none;">
+    <img class="logo" src="./static/resource/logo.png">
+    <img class="light-1" src="./static/resource/light.png">
+    <img class="light-2" src="./static/resource/light.png">
+    <img class="soulless so-18 item-18" width="241" height="60" src="./static/resource/one-18.png">
+    <img class="soulless so-6 item-6 owo-hover-grow" width="141" height="35" src="./static/resource/one-6.png" :tap="changeItem('ghgxz', 0)">
+    <img class="soulless so-16 item-16 owo-hover-grow" width="115" height="35" src="./static/resource/one-16.png" :tap="changeItem('yyxz', 1)">
+    <img class="soulless so-17 item-17" width="298" height="60" src="./static/resource/one-17.png">
+    <img class="soulless so-15 item-15 owo-hover-grow" width="141" height="35" src="./static/resource/one-15.png" :tap="changeItem('rmjyj', 2)">
+    <img class="soulless so-14 item-14 owo-hover-grow" width="141" height="35" src="./static/resource/one-14.png" :tap="changeItem('rmysj', 3)">
+    <img class="soulless so-13 item-13 owo-hover-grow" width="115" height="35" src="./static/resource/one-13.png" :tap="changeItem('rmkm', 4)">
+    <img class="soulless so-12 item-12 owo-hover-grow" width="114" height="35" src="./static/resource/one-12.png" :tap="changeItem('rmkm', 5)">
+    <img class="soulless so-11 item-11 owo-hover-grow" width="141" height="35" src="./static/resource/one-11.png" :tap="changeItem('rmkxj', 6)">
+    <img class="soulless so-10 item-10 owo-hover-grow" width="247" height="35" src="./static/resource/one-10.png" :tap="changeItem('wjgzjcgxz', 7)">
+    <img class="soulless so-9 item-9 owo-hover-grow" width="246" height="35" src="./static/resource/one-9.png" :tap="changeItem('mztjjcgxz', 8)">
+    <img class="soulless so-8 item-8 owo-hover-grow" width="287" height="36" src="./static/resource/one-8.png" :tap="changeItem('yglzjcgxz', 9)">
+    <img class="soulless so-7 item-7 owo-hover-grow" width="247" height="35" src="./static/resource/one-7.png" :tap="changeItem('wwbhjcgxz', 10)">
+    <img class="soulless so-19 item-19" width="1689" height="1163" src="./static/resource/one-19.png">
+    <img class="soulless so-1 button item-1 owo-hover-grow" width="39" height="39" src="./static/resource/one-1.png" :tap="prev">
+    <img class="soulless so-2 button item-2 owo-hover-grow" width="39" height="39" src="./static/resource/one-2.png" :tap="next">
+    <ul class="content"></ul>
+    <div class="edit">
+      <div class="ghgxz gjxz">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-1.jpg" width="340" height="610">
+        </a>
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+      </div>
+      <div class="yyxz gjxz">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-2.jpg" width="340" height="610">
+        </a>
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+      </div>
+      <div class="rmjyj gjrych">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-1.jpg" width="340" height="610">
+        </a>
+      </div>
+      <div class="rmysj gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-2.jpg" width="340" height="610">
+        </a>
+      </div>
+      <div class="rmkm gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-1.jpg" width="340" height="610">
+        </a>
+      </div>
+      <div class="rmyx gjrych">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+      </div>
+      <div class="rmkxj gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <a href="http://www.people.com.cn/" target="_blank">
+          <img src="./static/resource/people-1.jpg" width="340" height="610">
+        </a>
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+      </div>
+      <div class="wjgzjcgxz gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+      </div>
+      <div class="mztjjcgxz gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+      </div>
+      <div class="yglzjcgxz gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+      </div>
+      <div class="wwbhjcgxz gjrych">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+        <img src="./static/resource/people-2.jpg" width="340" height="610">
+        <img src="./static/resource/people-1.jpg" width="340" height="610">
+        <img src="./static/resource/people-3.jpg" width="340" height="610">
+      </div>
+    </div>
+    <div class="footer" template="copyright">
+      <p>人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>Copyright © 1997-2019 by www.people.com.cn. all rights reserved</p>
+    </div>
+  </div>
+  <div class="one-phone ox" template="one" style="display: none;">
+    <img class="soulless so-1 item-1" width="610" height="465" src="./static/resource/one-phone-1.png">
+    <img class="soulless so-2 item-2" width="297" height="73" src="./static/resource/one-phone-3.png" :tap="two">
+  </div>
+  <div class="two ox" template="two" style="display: none;">
+    <img class="soulless so-1 item-1" width="241" height="60" src="./static/resource/two-1.png" :tap="changeItem('gjxz', 0)">
+    <img class="soulless so-0 item-0" width="298" height="60" src="./static/resource/two-0.png" :tap="changeItem('gjrych', 1)">
+    <img class="soulless so-5 item-5" width="750" height="971" src="./static/resource/two-5.png">
+    <img class="hand" src="./static/resource/hand.png">
+    <img class="hide">
+    <ul class="content-mini"></ul>
+  </div>
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.main.m5lo0b1cpla.js" type="text/javascript" charset="UTF-8"></script>
 
-/* 清除浮动 */
-.clear:after {
-  content: "";
-  height: 0;
-  line-height: 0;
-  display: block;
-  visibility: hidden;
-  clear: both;
-  zoom: 1;
-}
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/swiper.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+</body>
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-.owo-hover-grow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
-.owo-hover-grow:hover, .owo-hover-grow:focus, .owo-hover-grow:active {
-  transform: scale(1.1);
-}
-
-.footer[template="copyright"] {
-  color: white;
-  font-size: 16px;
-  height: 70px;
-  position: absolute;
-  width: 100%;
-  bottom: 6%;
-  margin: auto;
-}
-
-[template="copyright"] p {
-  margin: 12px 0;
-  width: 100%;
-  display: inline-block;
-  line-height: 30px;
-  text-align: center;
-  color: white;
-}
-[template="home"] .so-1 {
-  position: absolute;
-  left: 568px;
-  top: 654px;
-  z-index: 20;
-}
-
-[template="home"] .so-2 {
-  position: absolute;
-  left: 1753px;
-  top: 653px;
-  z-index: 19;
-}
-
-[template="home"] .so-18 {
-  position: absolute;
-  left: 246px;
-  top: 376px;
-  z-index: 3;
-}
-
-[template="home"] .so-6 {
-  position: absolute;
-  left: 296px;
-  top: 441px;
-  z-index: 15;
-}
-
-[template="home"] .so-16 {
-  position: absolute;
-  left: 309px;
-  top: 483px;
-  z-index: 5;
-}
-
-[template="home"] .so-17 {
-  position: absolute;
-  left: 214px;
-  top: 527px;
-  z-index: 4;
-}
-
-[template="home"] .so-15 {
-  position: absolute;
-  left: 295px;
-  top: 599px;
-  z-index: 6;
-}
-
-[template="home"] .so-14 {
-  position: absolute;
-  left: 294px;
-  top: 641px;
-  z-index: 7;
-}
-
-[template="home"] .so-13 {
-  position: absolute;
-  left: 307px;
-  top: 684px;
-  z-index: 8;
-}
-
-[template="home"] .so-12 {
-  position: absolute;
-  left: 307px;
-  top: 728px;
-  z-index: 9;
-}
-
-[template="home"] .so-11 {
-  position: absolute;
-  left: 292px;
-  top: 772px;
-  z-index: 10;
-}
-
-[template="home"] .so-10 {
-  position: absolute;
-  left: 244px;
-  top: 817px;
-  z-index: 11;
-}
-
-[template="home"] .so-9 {
-  position: absolute;
-  left: 245px;
-  top: 861px;
-  z-index: 12;
-}
-
-[template="home"] .so-8 {
-  position: absolute;
-  left: 220px;
-  top: 906px;
-  z-index: 13;
-}
-
-[template="home"] .so-7 {
-  position: absolute;
-  left: 240px;
-  top: 950px;
-  z-index: 14;
-}
-
-[template="home"] .so-19 {
-  position: absolute;
-  left: 110px;
-  top: 33px;
-  z-index: 2;
-}
-
-[template="home"] .content {
-  position: absolute;
-  width: 1098px;
-  height: 630px;
-  z-index: 23;
-  left: 633px;
-  top: 356px;
-  overflow: hidden;
-}
-
-[template="home"] .content li {
-  width: 340px;
-  height: 610px;
-  position: absolute;
-  background-size: 100% 100%;
-  cursor: pointer;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  transition: all 0.4s linear;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-[template="home"] .content li img {
-  width: 100%;
-  height: 100%;
-}
-
-[template="home"] .content .show {
-  opacity: 1;
-}
-
-[template="home"] .content .hide {
-  opacity: 0;
-  z-index: -1;
-}
-
-[template="home"] .owo-hover-grow {
-  cursor: pointer;
-}
-
-[template="home"] .edit {
-  display: none;
-}
-
-[template="home"] .next {
-  left: 102% !important;
-}
-
-[template="home"] .logo {
-  position: absolute;
-  left: 110px;
-  top: 90px;
-}
-
-[template="home"] .light-1 {
-  position: absolute;
-  left: 363px;
-  top: 102px;
-  -webkit-animation: fade 2s infinite;
-          animation: fade 2s infinite;
-}
-
-[template="home"] .light-2 {
-  position: absolute;
-  left: 957px;
-  top: 105px;
-  -webkit-animation: fade 2s infinite;
-          animation: fade 2s infinite;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-</style>
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-    
-    
-  </head>
-  <body>
-    <!-- 页面区域 -->
-    <div class="one ox" template="home"><img class="logo" src="./static/resource/logo.png"><img class="light-1" src="./static/resource/light.png"><img class="light-2" src="./static/resource/light.png"><img class="soulless so-18 item-18" width="241" height="60" src="./static/resource/one-18.png"><img class="soulless so-6 item-6 owo-hover-grow" width="141" height="35" src="./static/resource/one-6.png" :tap="changeItem('ghgxz')"><img class="soulless so-16 item-16 owo-hover-grow" width="115" height="35" src="./static/resource/one-16.png" :tap="changeItem('yyxz')"><img class="soulless so-17 item-17" width="298" height="60" src="./static/resource/one-17.png"><img class="soulless so-15 item-15 owo-hover-grow" width="141" height="35" src="./static/resource/one-15.png" :tap="changeItem('rmjyj')"><img class="soulless so-14 item-14 owo-hover-grow" width="141" height="35" src="./static/resource/one-14.png" :tap="changeItem('rmysj')"><img class="soulless so-13 item-13 owo-hover-grow" width="115" height="35" src="./static/resource/one-13.png" :tap="changeItem('rmkm')"><img class="soulless so-12 item-12 owo-hover-grow" width="114" height="35" src="./static/resource/one-12.png" :tap="changeItem('rmkm')"><img class="soulless so-11 item-11 owo-hover-grow" width="141" height="35" src="./static/resource/one-11.png" :tap="changeItem('rmkxj')"><img class="soulless so-10 item-10 owo-hover-grow" width="247" height="35" src="./static/resource/one-10.png" :tap="changeItem('wjgzjcgxz')"><img class="soulless so-9 item-9 owo-hover-grow" width="246" height="35" src="./static/resource/one-9.png" :tap="changeItem('mztjjcgxz')"><img class="soulless so-8 item-8 owo-hover-grow" width="287" height="36" src="./static/resource/one-8.png" :tap="changeItem('yglzjcgxz')"><img class="soulless so-7 item-7 owo-hover-grow" width="247" height="35" src="./static/resource/one-7.png" :tap="changeItem('wwbhjcgxz')"><img class="soulless so-19 item-19" width="1689" height="1163" src="./static/resource/one-19.png"><img class="soulless so-1 button item-1 owo-hover-grow" width="39" height="39" src="./static/resource/one-1.png" :tap="prev"><img class="soulless so-2 button item-2 owo-hover-grow" width="39" height="39" src="./static/resource/one-2.png" :tap="next"><ul class="content"><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li><li><img src="./static/resource/people-2.png"></li><li><img src="./static/resource/people-3.png"></li><li><img src="./static/resource/people-1.png"></li></ul><div class="edit"><div class="ghgxz"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="yyxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmjyj"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmysj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="rmkm"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmyx"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="rmkxj"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div><div class="wjgzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"></div><div class="mztjjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="yglzjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"></div><div class="wwbhjcgxz"><img src="./static/resource/people-3.png" width="340" height="610"><img src="./static/resource/people-2.png" width="340" height="610"><img src="./static/resource/people-1.png" width="340" height="610"><img src="./static/resource/people-3.png" width="340" height="610"></div></div><div class="footer" template="copyright">
-    <p>人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>Copyright © 1997-2019 by www.people.com.cn. all rights reserved</p>
-  </div></div>
-    <!-- 框架script代码 --><script>"use strict";
-
-// 存储页面基本信息
-var owo = {
-  // 页面默认入口 如果没有设置 则取第一个页面为默认页面
-  entry: "home",
-  // 全局方法变量
-  tool: {},
-  // 框架状态变量
-  state: {}
-};
-/*
-  存储每个页面的函数
-  键名：页面名称
-  键值：方法列表
-*/
-
-owo.script = {
-  "home": {
-    "data": {
-      "swiper": null
-    },
-    "created": function created() {
-      this.initContent();
-    },
-    "prev": function prev() {
-      this.data.swiper.prev();
-    },
-    "next": function next() {
-      this.data.swiper.clickNext();
-    },
-    "initContent": function initContent() {
-      this.data.swiper = swiperIt.init(owo.query('.content')[0], {
-        autoplay: 3000,
-        showSlider: 3,
-        width: 32,
-        step: 1,
-        slideChange: function slideChange(ind) {},
-        start: function start(ind) {}
-      });
-    },
-    "changeItem": function changeItem(value) {
-      var _this = this;
-
-      var content = owo.query('.content')[0];
-      content.style.display = 'none';
-      this.data.swiper.destroy();
-      var imgList = owo.query('.' + value + ' img');
-      var newHtml = ''; // 判断卡片数量决定是否启用轮播
-
-      if (imgList.length <= 3) {
-        // 隐藏左右按钮
-        this.$el.classList.add('no-button');
-        owo.query('.so-19')[0].src = './static/resource/one-19-2.png';
-
-        if (imgList.length === 1) {
-          newHtml += "<li style=\"left: 0;right: 0;\"><img src=\"".concat(imgList[0].src, "\"></li>");
-        } else if (imgList.length === 2) {
-          newHtml += "<li style=\"left: 10%;\"><img src=\"".concat(imgList[0].src, "\"></li><li style=\"left: 60%;\"><img src=\"").concat(imgList[1].src, "\"></li>");
-        } else if (imgList.length === 3) {
-          newHtml += "<li style=\"left: 0%;\"><img src=\"".concat(imgList[0].src, "\"></li><li style=\"left: 34%;\"><img src=\"").concat(imgList[1].src, "\"></li><li style=\"left: 68%;\"><img src=\"").concat(imgList[1].src, "\"></li>");
-        }
-      } else {
-        owo.query('.so-19')[0].src = './static/resource/one-19.png';
-        this.$el.classList.remove('no-button');
-
-        for (var ind = 0; ind < imgList.length; ind++) {
-          var item = imgList[ind];
-          newHtml += "<li><img src=\"".concat(item.src, "\"></li>");
-        }
-
-        setTimeout(function () {
-          _this.initContent();
-        }, 100);
-      }
-
-      owo.query('.content')[0].innerHTML = newHtml;
-      setTimeout(function () {
-        content.style.display = 'block';
-      }, 500);
-    },
-    "template": {
-      "copyright": {
-        "prop": {}
-      }
-    }
-  }
-};</script>
-<!-- 框架script文件 -->
-<script src="./static/js/owo.main.js" type="text/javascript" charset="UTF-8"></script>
-<!-- 调试-热刷新代码 -->
-<script src="./static/js/autoReload.js" type="text/javascript" charset="UTF-8"></script>
-
-    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/swiper.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
-  </body>
 </html>
