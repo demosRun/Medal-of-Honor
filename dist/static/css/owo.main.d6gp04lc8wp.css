@@ -318,6 +318,25 @@ li {
   margin: auto;
   z-index: 1;
 }
+[template="two"] .blinker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+[template="two"] .blinker .text-2 {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 40%;
+}
+
 .two[template="two"] {
   width: 100%;
   height: 100%;
@@ -336,6 +355,9 @@ li {
   top: 14%;
   z-index: 3;
   overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 [template="two"] li {
@@ -371,8 +393,7 @@ li {
 }
 
 [template="two"] li .hide {
-  opacity: 0;
-  z-index: 0;
+  z-index: 16;
 }
 
 [template="two"] .so-1 {
@@ -400,7 +421,7 @@ li {
   top: 13%;
   width: auto;
   z-index: 2;
-  left: -10%;
+  left: -10.5%;
   right: -10%;
   margin: 0 auto;
 }
@@ -431,9 +452,11 @@ li {
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 10%;
+  bottom: 48%;
   opacity: 0.9;
   z-index: 9;
+  height: 7%;
+  width: auto;
   -webkit-animation: myfirst 2s infinite;
           animation: myfirst 2s infinite;
   -webkit-animation-timing-function: linear;
@@ -444,26 +467,83 @@ li {
 
 @-webkit-keyframes myfirst {
   from {
-    left: 50%;
-    opacity: 0;
+    left: -30%;
   }
 
   to {
-    left: 80%;
-    opacity: 1;
+    left: 30%;
   }
 }
 
 @keyframes myfirst {
   from {
-    left: 50%;
-    opacity: 0;
+    left: -30%;
   }
 
   to {
-    left: 80%;
-    opacity: 1;
+    left: 30%;
   }
+}
+
+[template="two"] .hand-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70%;
+  height: 7%;
+  width: auto;
+  margin: auto;
+  -webkit-animation: myfirst2 2s infinite;
+          animation: myfirst2 2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes myfirst2 {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+@keyframes myfirst2 {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+[template="two"] .text-1 {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  bottom: 62%;
+  position: absolute;
+  width: 100%;
+}
+
+[template="two"] .enter {
+  width: 100px;
+  height: 35px;
+  color: white;
+  border: 1px solid white;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 23%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 
 [template="two"] .hide {
@@ -474,4 +554,103 @@ li {
   top: 0;
   z-index: 5;
   opacity: 0;
+}
+
+[template="two"] .expand {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+}
+
+[template="two"] .expand img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+[template="two"] .expand2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+}
+
+[template="two"] .expand2 img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+[template="two"] .left {
+  position: absolute;
+  left: 4%;
+  z-index: 9;
+  top: -3%;
+  bottom: 0;
+  margin: auto;
+  width: 27px;
+  -webkit-animation: myfirst3 2s infinite;
+          animation: myfirst3 2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+[template="two"] .right {
+  position: absolute;
+  right: 3%;
+  z-index: 9;
+  top: -3%;
+  bottom: 0;
+  margin: auto;
+  width: 27px;
+  transform: rotate(180deg);
+  -webkit-animation: myfirst4 2s infinite;
+          animation: myfirst4 2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes myfirst3 {
+  to {
+    left: 0%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes myfirst3 {
+  to {
+    left: 0%;
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes myfirst4 {
+  to {
+    right: 0%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes myfirst4 {
+  to {
+    right: 0%;
+    opacity: 0.2;
+  }
 }

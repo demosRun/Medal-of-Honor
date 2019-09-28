@@ -21,11 +21,11 @@
   <meta name="browsermode" content="application" />
   <meta name="x5-page-mode" content="app" />
   <!-- 页面主样式文件 -->
-  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.m5lo0b1cpla.css">
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.d6gp04lc8wp.css">
   <!-- 附属css文件 -->
   <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-  <link rel="stylesheet" href="./static/css/owo.animation.m5lo0b1cpla.css">
-  <link rel="stylesheet" href="./static/css/owo.animate.m5lo0b1cpla.css">
+  <link rel="stylesheet" href="./static/css/owo.animation.d6gp04lc8wp.css">
+  <link rel="stylesheet" href="./static/css/owo.animate.d6gp04lc8wp.css">
 </head>
 
 <body>
@@ -139,12 +139,20 @@
     <img class="soulless so-1 item-1" width="241" height="60" src="./static/resource/two-1.png" :tap="changeItem('gjxz', 0)">
     <img class="soulless so-0 item-0" width="298" height="60" src="./static/resource/two-0.png" :tap="changeItem('gjrych', 1)">
     <img class="soulless so-5 item-5" width="750" height="971" src="./static/resource/two-5.png">
-    <img class="hand" src="./static/resource/hand.png">
-    <img class="hide">
+    <img class="hide" src="./static/resource/transparent.png" :tap="wholeImg">
+    <div class="blinker">
+      <img class="hand-2" src="./static/resource/hand2.png">
+      <div class="text-1">点击图片全屏浏览</div>
+      <img class="hand" src="./static/resource/hand.png">
+      <div class="text-2">左右滑动切换海报</div>
+      <div class="enter" :tap="enter">我知道了</div>
+    </div>
+    <img class="left" src="./static/resource/left.png">
+    <img class="right" src="./static/resource/left.png">
     <ul class="content-mini"></ul>
   </div>
   <!-- 框架script文件 -->
-  <script src="./static/js/owo.main.m5lo0b1cpla.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/owo.main.d6gp04lc8wp.js" type="text/javascript" charset="UTF-8"></script>
 
   <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
   <script src="./static/js/swiper.js" type="text/javascript" charset="UTF-8"></script>

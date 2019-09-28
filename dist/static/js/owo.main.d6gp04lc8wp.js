@@ -1,4 +1,4 @@
-// Fri Sep 27 2019 22:52:58 GMT+0800 (GMT+08:00)
+// Sat Sep 28 2019 16:26:30 GMT+0800 (GMT+08:00)
 
 "use strict";
 
@@ -107,7 +107,8 @@ owo.script = {
   },
   "two": {
     "data": {
-      "activeIndex": 0
+      "activeIndex": 0,
+      "isExpand": false
     },
     "created": function created() {
       var _this3 = this;
@@ -140,9 +141,6 @@ owo.script = {
           }
         }
       });
-      setTimeout(function () {
-        owo.query('.hand')[0].style.display = 'none';
-      }, 6000);
     },
     "initMiniContent": function initMiniContent() {
       this.data.swiper = swiperIt.init(owo.query('.content-mini')[0], {
@@ -209,6 +207,34 @@ owo.script = {
     },
     "next": function next() {
       this.data.swiper.clickNext();
+    },
+    "wholeImg": function wholeImg() {
+      console.log(this.data.isExpand);
+
+      if (this.data.isExpand) {
+        this.data.isExpand = false;
+        owo.query('.content-mini')[0].classList.remove('expand');
+        this.data.swiper.startAutoPlay();
+      } else {
+        this.data.isExpand = true;
+        this.data.swiper.stopAutoPlay();
+
+        if (owo.tool.getScreenInfo().ratio < 0.557) {
+          owo.query('.content-mini')[0].classList.add('expand');
+        } else {
+          owo.query('.content-mini')[0].classList.add('expand2');
+        }
+
+        setTimeout(function () {
+          owo.tool.toast('点击屏幕退出全屏');
+        }, 500);
+      }
+
+      return;
+    },
+    "enter": function enter() {
+      owo.query('.blinker')[0].style.display = 'none';
+      owo.query('.content-mini')[0].style.opacity = '1';
     }
   }
 };
@@ -785,7 +811,7 @@ owo.tool.toast = function (text, size, time) {
   toast.setAttribute("id", "toast")
   toast.setAttribute("class", "toast")
   // 设置样式
-  toast.style.cssText = "position:fixed;z-index:999;background-color:rgba(0, 0, 0, 0.5);bottom:10%;border-radius:10px;left:0;right:0;margin:0 auto;text-align:center;color:white;max-width:330px;padding:15px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:" + fontSize + 'px;'
+  toast.style.cssText = "position:fixed;z-index:999;background-color:rgba(0, 0, 0, 0.8);bottom:9%;border-radius:5px;left:0;right:0;margin:0 auto;text-align:center;color:white;max-width:40%;padding:5px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:" + fontSize + 'px;'
 
   toast.innerHTML = text
   document.body.appendChild(toast)
@@ -794,6 +820,20 @@ owo.tool.toast = function (text, size, time) {
     window.owo.state.toastClock = null
   }
   window.owo.state.toastClock = setTimeout(hideToast, time)
+}/**
+ * 获取屏幕信息
+ * @return {object} 屏幕信息
+ */
+
+owo.tool.getScreenInfo = function () {
+  // 有可能不兼容ie
+  return {
+    clientWidth: window.innerWidth,
+    clientHeight: window.innerHeight,
+    ratio: window.innerWidth / window.innerHeight,
+    // 缩放比例
+    devicePixelRatio: window.devicePixelRatio || 1
+  }
 }
 
 _owo._event_tap = function (tempDom, callBack) {
