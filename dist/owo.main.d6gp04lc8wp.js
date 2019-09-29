@@ -1,72 +1,6 @@
 // Sat Sep 28 2019 16:26:30 GMT+0800 (GMT+08:00)
-// 兼容classList
-// 定义一个classList对象
-if (!("classList" in document.documentElement)) {
-  Object.defineProperty(window.Element.prototype, 'classList', {
-    get: function () {
-      var self = this
- 
-      function update(fn) {
-        return function () {
-          var className = self.className.replace(/^\s+|\s+$/g, ''),
-            valArr = arguments
- 
-          return fn(className, valArr)
-        }
-      }
- 
-      function add_rmv (className, valArr, tag) {
-        for (var i in valArr) {
-          if(typeof valArr[i] !== 'string' || !!~valArr[i].search(/\s+/g)) throw TypeError('the type of value is error')
-          var temp = valArr[i]
-          var flag = !!~className.search(new RegExp('(\\s+)?'+temp+'(\\s+)?'))
-          if (tag === 1) {
-            !flag ? className += ' ' + temp : ''
-          } else if (tag === 2) {
-            flag ? className = className.replace(new RegExp('(\\s+)?'+temp),'') : ''
-          }
-        }
-        self.className = className
-        return tag
-      }
- 
-      return {
-        add: update(function (className, valArr) {
-          add_rmv(className, valArr, 1)
-        }),
- 
-        remove: update(function (className, valArr) {
-          add_rmv(className, valArr, 2)
-        }),
- 
-        toggle: function (value) {
-          if(typeof value !== 'string' || arguments.length === 0) throw TypeError("Failed to execute 'toggle' on 'DOMTokenList': 1 argument(string) required, but only 0 present.")
-          if (arguments.length === 1) {
-            this.contains(value) ? this.remove(value) : this.add(value)
-            return
-          }
-          !arguments[1] ? this.remove(value) : this.add(value)
-        },
- 
-        contains: update(function (className, valArr) {
-          if (valArr.length === 0) throw TypeError("Failed to execute 'contains' on 'DOMTokenList': 1 argument required, but only 0 present.")
-          if (typeof valArr[0] !== 'string' || !!~valArr[0].search(/\s+/g)) return false
-          return !!~className.search(new RegExp(valArr[0]))
-        }),
- 
-        item: function (index) {
-          typeof index === 'string' ? index = parseInt(index) : ''
-          if (arguments.length === 0 || typeof index !== 'number') throw TypeError("Failed to execute 'toggle' on 'DOMTokenList': 1 argument required, but only 0 present.")
-          var claArr = self.className.replace(/^\s+|\s+$/, '').split(/\s+/)
-          var len = claArr.length
-          if (index < 0 || index >= len) return null
-          return claArr[index]
-        }
-      }
-    }
-  })
-}
 
+// 存储页面基本信息
 var owo = {
   // 页面默认入口 如果没有设置 则取第一个页面为默认页面
   entry: "home",
@@ -78,40 +12,35 @@ var owo = {
 
 var isShowBig = false
 var noSwiper = false
-var isChange = false
+
 function showBigImage () {
-  if (isChange) return
-  var e = arguments.callee.caller.arguments[0]|| window.event
-  // console.log('ssssdddddd')
-  // console.log(e)
-  if (!e.target) e.target = e.srcElement.parentNode
-  var imageItem = e.target.querySelectorAll('img')[0] || e.target
-  var box2 = document.querySelectorAll('.show-big-img')[0]
-  var box2Img = document.querySelectorAll('.show-big-img img')[0]
-  box2Img.src = imageItem.src
-  box2Img.style.height = owo.tool.getScreenInfo().clientHeight + 'px'
+  var e = window.event || arguments.callee.caller.arguments[0]
+  // console.log(this, e.target)
   if (isShowBig) {
     isShowBig = false
-    box2Img.src = imageItem.src
+    var imageItem = e.target.getElementsByTagName('img')[0]
+    imageItem.style.display = 'none'
+    setTimeout(function()  {
+      imageItem.style.display = 'block'
+    }, 100)
     // owo.query('.so-1.button')[0].style.display = 'block'
     // owo.query('.so-2.button')[0].style.display = 'block'
-    // console.log('ssdddddl')
-    box2.style.display = 'none'
-    // e.target.classList.remove('is-big')
+    e.target.classList.remove('is-big')
     owo.script.home.data.swiper.startAutoPlay()
   } else {
     isShowBig = true
-    box2.style.display = 'block'
+    var imageItem = e.target.getElementsByTagName('img')[0]
+    imageItem.style.display = 'none'
+    setTimeout(function () {
+      imageItem.style.display = 'block'
+    }, 100)
     // if (!noSwiper) {
     //   owo.query('.so-1.button')[0].style.display = 'none'
     //   owo.query('.so-2.button')[0].style.display = 'none'
     // }
     owo.script.home.data.swiper.stopAutoPlay()
-    // e.target.classList.add('is-big')
+    e.target.classList.add('is-big')
   }
-  setTimeout(function () {
-    isChange = false
-  }, 1000);
 }
 
 var lala2 = false
@@ -138,29 +67,24 @@ owo.script = {
     },
     "prev": function prev() {
       var _this = this
-      console.log(this)
-      eventFor2 = 'prev'
       if (this.data.isBusy) return
-      owo.script.home.data.isBusy = true
-      owo.script.home.data.swiper.clickPrev();
+      this.data.isBusy = true
+      this.data.swiper.clickPrev();
       setTimeout(function() {
         _this.data.isBusy = false
       }, 800)
     },
     "next": function next() {
-      eventFor2 = 'next'
       var _this = this
       if (this.data.isBusy) return
-      owo.script.home.data.isBusy = true
-      owo.script.home.data.swiper.clickNext();
+      this.data.isBusy = true
+      this.data.swiper.clickNext();
       setTimeout(function () {
         _this.data.isBusy = false
       }, 800)
     },
     "initContent": function initContent() {
-      eventFor2 = 'initContent'
-      console.log(swiperIt)
-      owo.script.home.data.swiper = swiperIt.init(owo.query('.content')[0], {
+      this.data.swiper = swiperIt.init(owo.query('.content')[0], {
         autoplay: 3000,
         showSlider: 3,
         width: 32,
@@ -199,7 +123,6 @@ owo.script = {
         owo.query('.so-1.button')[0].style.display = 'block'
         owo.query('.so-2.button')[0].style.display = 'block'
         owo.query('.so-19')[0].src = '/img/MAIN/2019/09/119724/resource/one-19.png';
-        console.log(this.$el.classList)
         this.$el.classList.remove('no-button');
 
         for (var _ind = 0; _ind < imgList.length; _ind++) {
@@ -229,7 +152,6 @@ owo.script = {
       // 动画
       owo.tool.animate('zoomIn', owo.query('.so-1')[0], 200);
       owo.tool.animate('fadeIn', owo.query('.so-2')[0], 1200);
-      owo.tool.animate('fadeInDown', owo.query('.medal')[0], 1600)
     },
     "two": function two() {
       owo.go('two', 'scaleDown', 'moveFromRight', 'scaleDown', 'moveFromLeft', true);
@@ -331,7 +253,6 @@ owo.script = {
           newHtml += "<li style=\"left: 0%;\">".concat(imgList[0].outerHTML, "</li><li style=\"left: 34%;\">").concat(imgList[1].outerHTML, "</li><li style=\"left: 68%;\">").concat(imgList[2].outerHTML, "</li>");
         }
       } else {
-        console.log('0000000000000000000000000')
         this.$el.classList.remove('no-button');
 
         for (var _ind2 = 0; _ind2 < imgList.length; _ind2++) {
@@ -361,7 +282,6 @@ owo.script = {
 
       if (this.data.isExpand) {
         this.data.isExpand = false;
-        console.log('999999999999')
         owo.query('.content-mini')[0].classList.remove('expand');
 		owo.query('.content-mini')[0].classList.remove('expand2')
         this.data.swiper.startAutoPlay();
@@ -454,13 +374,10 @@ _owo.showHandle = function (pageFunction) {
 // 判断是否为手机
 _owo.isMobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null
 
-eventFor2 = null
 
 _owo._run = function (eventFor, templateName, event) {
-  if (!eventFor) eventFor = eventFor2
   // 复制eventFor防止污染
   var eventForCopy = eventFor
-  
   // 判断页面是否有自己的方法
   var newPageFunction = window.owo.script[window.owo.activePage]
   // console.log(this.attributes)
@@ -471,9 +388,6 @@ _owo._run = function (eventFor, templateName, event) {
   // 待优化可以单独提出来
   // 取出参数
   var parameterArr = []
-  console.log('-------')
-  console.log(eventForCopy)
-  if (!eventForCopy) return
   var parameterList = eventForCopy.match(/[^\(\)]+(?=\))/g)
   
   if (parameterList && parameterList.length > 0) {
@@ -757,7 +671,6 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
         oldDom.style.display = 'none'
         // console.log(oldDom)
         oldDom.style.position = ''
-        console.log('------------------')
         oldDom.classList.remove('owo-animation')
         oldDom.classList.remove('owo-animation-forward')
         parentDom.style.perspective = ''
@@ -766,7 +679,6 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
           var value = animationIn[ind]
           oldDom.classList.remove('o-page-' + value)
         }
-        console.log('--------222222222222----------')
       }, delay);
     }
   }
@@ -779,15 +691,12 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
     setTimeout(function () {
       // 清除临时设置的style
       newDom.style.position = '';
-      console.log('sdddddd')
       newDom.classList.remove('owo-animation');
       newDom.classList.remove('owo-animation-forward');
-      
       for (var ind =0; ind < animationOut.length; ind++) {
         var value = animationOut[ind]
         newDom.classList.remove('o-page-' + value);
       }
-      console.log('kkkkkkkkkkkkkkk')
     }, delay);
   }
 }
@@ -890,10 +799,8 @@ owo.tool.animate = function (name, dom, delay) {
   dom.addEventListener('animationend', animateEnd)
   function animateEnd () {
     // 待优化 感觉不需要这样
-    console.log('sdsdds')
     dom.classList.remove(name)
     dom.classList.remove('owo-animated')
-    console.log('sdsdds2')
     if (delay) {
       dom.style.animationDelay = ''
     }

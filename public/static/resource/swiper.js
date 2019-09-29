@@ -1,5 +1,3 @@
-var swiperThis = null
-
 var swiperIt = {
   isRun: false,
   timer: null,
@@ -77,18 +75,14 @@ var swiperIt = {
     // 判断是否自动轮播
     if (_this.config.autoplay) {
       // 鼠标悬浮停止轮播
-      swiperThis = _this
-      console.log(_this.cont)
-      _this.cont.onmouseover = _this.stopAutoPlay
-      _this.cont.onmouseout = _this.startAutoPlay
-      // _this.cont.addEventListener("mouseover", _this.stopAutoPlay, false)
+      _this.cont.addEventListener("mouseover", _this.stopAutoPlay.bind(_this), false)
       
-      // // 鼠标移出开始轮播
-      // _this.cont.addEventListener("mouseout", _this.startAutoPlay, false)
+      // 鼠标移出开始轮播
+      _this.cont.addEventListener("mouseout", _this.startAutoPlay.bind(_this), false)
       // 当前窗口得到焦点
-      window.onfocus = _this.startAutoPlay
+      window.onfocus = _this.startAutoPlay.bind(_this)
       // 当前窗口失去焦点
-      window.onblur = _this.stopAutoPlay
+      window.onblur = _this.stopAutoPlay.bind(_this)
       setTimeout(function () {
         _this.startAutoPlay()
       }, 0)
@@ -97,8 +91,8 @@ var swiperIt = {
     return this
   },
   startAutoPlay: function () {
-    if (!swiperThis.isRun) return
-    var _this = swiperThis
+    if (!this.isRun) return
+    var _this = this
     _this.tempCheck = true
     setTimeout(function () {
       if (_this.timer) return
@@ -116,11 +110,11 @@ var swiperIt = {
     return false
   },
   stopAutoPlay: function () {
-    if (!swiperThis.isRun) return
+    if (!this.isRun) return
     // console.log('停止轮播!', this.cont)
-    clearInterval(swiperThis.timer)
-    swiperThis.timer = null
-    swiperThis.tempCheck = false
+    clearInterval(this.timer)
+    this.timer = null
+    this.tempCheck = false
     return false
   },
   move: function () {
@@ -145,11 +139,10 @@ var swiperIt = {
     
   },
   clickNext: function () {
-    var _this = this
     this.stopAutoPlay()
     this.next()
-    setTimeout(function () {
-      _this.startAutoPlay()
+    setTimeout(() => {
+      this.startAutoPlay()
     }, 3000)
   },
   prev: function () {
@@ -164,7 +157,7 @@ var swiperIt = {
   clickPrev: function () {
     this.stopAutoPlay()
     this.prev()
-    setTimeout(function () {
+    setTimeout(() => {
       this.startAutoPlay()
     }, 3000)
   },
